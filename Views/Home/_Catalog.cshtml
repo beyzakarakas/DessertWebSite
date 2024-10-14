@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="~/css/Catalog.css">
+
+@model List<BalMutfak.Models.Product>
+
+<div class="menu-section">
+    @foreach (var product in Model)
+    {
+        <div class="card">
+            <img src="@Url.Content(product.ImageUrl)" alt="@product.Name" class="card-img">
+            <div class="card-content">
+                <h2>@product.Name</h2>
+                <p>@product.Description</p>
+            </div>
+        </div>
+    }
+</div>

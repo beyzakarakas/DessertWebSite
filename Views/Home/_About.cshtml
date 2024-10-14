@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımızda</title>
+    <link rel="stylesheet" href="~/css/About.css">
+</head>
+
+<body>
+    <div class="about">
+        <h3>Hakkımızda</h3>
+        <p>
+            2024 yılında kurulan Bal Mutfak, tatlı yapımına olan tutkunun ve kaliteli hizmet anlayışının bir araya
+            geldiği özel bir işletmedir. Kuruluşumuzun temelinde, müşterilerimize yalnızca tatlı sunmak değil, aynı
+            zamanda unutulmaz bir lezzet deneyimi yaşatmak bulunmaktadır. Tatlılarımızda kullandığımız malzemeler,
+            her
+            zaman en taze ve doğal olanlardan özenle seçilir ve her bir ürünümüz titizlikle hazırlanarak
+            sofralarınıza
+            ulaştırılır. Lezzet, kalite ve estetiği bir araya getiren ürünlerimizle, tatlıya olan bakış açınızı
+            değiştirmeyi hedefliyoruz.
+        </p>
+
+        <p>
+            Bal Mutfak olarak, alanında uzman ve deneyimli bir ekip ile çalışıyoruz. Ustalarımızın yıllara dayanan
+            deneyimi, en ince detaylara dikkat edilerek hazırlanmış tariflerimizle birleşiyor ve her tatlımız,
+            geleneksel lezzetlerle modern dokunuşları bir araya getiriyor. Ekibimiz, her adımda müşteri
+            memnuniyetini ön
+            planda tutan, titiz bir çalışma anlayışına sahip. Ürünlerimizin üretim sürecinden, müşterilerimize
+            sunulmasına kadar olan her aşamada kalite kontrolünü büyük bir hassasiyetle gerçekleştiriyoruz.
+        </p>
+
+        <p>
+            Kuruluşumuzun ilk gününden itibaren "tatlı yapmanın sanatı" ilkesini benimsedik. Sadece tatlı satmıyor,
+            müşterilerimizin damağında iz bırakacak lezzet hikayeleri yazıyoruz. Hem yerel hem de ulusal pazarda
+            adım
+            adım büyüyerek, tatlı sevenlerin vazgeçilmez adresi olma yolunda sağlam adımlarla ilerliyoruz. Bu yolda,
+            müşteri taleplerini en iyi şekilde karşılamak, değişen trendleri yakından takip etmek ve yenilikçi
+            ürünlerle
+            sürekli gelişmek temel ilkelerimiz arasında yer alıyor.
+        </p>
+
+        <p>
+            Bal Mutfak, sektördeki konumunu güçlendirmeyi ve tatlı alanında fark yaratan bir marka olmayı
+            hedeflemektedir. Geleneksel lezzetlerimizi modern sunumlarla birleştirip, her damak zevkine hitap eden
+            tatlılarla, sektörde kalıcı bir yer edinmeyi amaçlıyoruz.
+        </p>
+
+
+        <div class="container">
+            <div class="vision text-card">
+                <h3><i class="bi bi-eye"></i>Vizyonumuz</h3>
+                <p>
+                    Bal Mutfak olarak hedefimiz, tatlı sektöründe hem ulusal hem de uluslararası arenada adından söz
+                    ettiren,
+                    yenilikçi ve kalite odaklı bir marka olmaktır. Müşteri odaklı yaklaşımımızla büyümeyi sürdürerek,
+                    geleneksel
+                    tatlarımızı modern yorumlarla birleştirip geniş kitlelere ulaştırmayı hedefliyoruz.
+                </p>
+            </div>
+            <div class="mision text-card">
+                <h3><i class="bi bi-award"></i>Misyonumuz</h3>
+                <p>
+                    Bal Mutfak olarak hedefimiz, tatlı sektöründe hem ulusal hem de uluslararası arenada adından söz
+                    ettiren,
+                    yenilikçi ve kalite odaklı bir marka olmaktır. Müşteri odaklı yaklaşımımızla büyümeyi sürdürerek,
+                    geleneksel
+                    tatlarımızı modern yorumlarla birleştirip geniş kitlelere ulaştırmayı hedefliyoruz.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="sizedbox" style="height: 100px;"></div>
+
+
+    <script>
+        // Intersection Observer ile elementleri gözlemleyelim
+        document.addEventListener("DOMContentLoaded", function () {
+            let observerOptions = {
+                root: null, // Viewport olarak ayarlanıyor
+                threshold: 0.9 // Elementin %90'ı görünür olduğunda tetiklenecek
+            };
+
+            let observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target); // Animasyon bir kez tetiklendiğinde gözlem durduruluyor
+                    }
+                });
+            }, observerOptions);
+
+            // Gözlemlemek istediğimiz elementler
+            let elements = document.querySelectorAll('.about, .text-card');
+            elements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

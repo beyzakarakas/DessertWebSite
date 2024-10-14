@@ -1,0 +1,56 @@
+﻿@model List<BalMutfak.Models.Product>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap"
+    rel="stylesheet">
+<link rel="stylesheet" href="~/css/Index.css">
+
+
+<div class="wave">
+    <img src="~/images/png-beyaz-logo.png" class="wave-image logo-animation">
+</div>
+
+
+<div class="content">
+    <div class="text-section">
+        <h1>Nefis Tatlılarımızla Tanışın!</h1>
+        <p>Tatlı severlerin buluşma noktası BAL MUTFAK’a hoş geldiniz! Her lokmada mutluluğu bulacağınız taze ve nefis
+            tatlılarımızla dolup taşan bir dünya sizi bekliyor.
+        </p>
+        <a href="#menu" class="smart-button">
+            <span class="button-text">Menüyü Gör</span>
+            <i class="fa fa-angle-down button-icon"></i>
+        </a>
+    </div>
+</div>
+<div class="wave wave2"></div>
+
+
+<div class="content-mobile col">
+    <div class="content-mobile-text row">
+        <h1>Nefis Tatlılarımızla Tanışın!</h1>
+        <p>Tatlı severlerin buluşma noktası BAL MUTFAK’a hoş geldiniz! Her lokmada mutluluğu bulacağınız taze ve
+            nefis
+            tatlılarımızla dolup taşan bir dünya sizi bekliyor.
+        </p>
+    </div>
+    <div class="content-mobile-img row">
+        <img src="~/images/png-siyah-logo.png" class="logo-animation">
+    </div>
+</div>
+
+
+
+<div id="menu" class="menu">
+    <center>
+        <h2 class="title">Menü</h2>
+    </center>
+    @await Html.PartialAsync("_Catalog", Model)
+</div>
+
+<div id="about" class="about">
+    @await Html.PartialAsync("_About")
+</div>
+
+<div id="communication" class="communication">
+    @await Html.PartialAsync("_Communication")
+</div>

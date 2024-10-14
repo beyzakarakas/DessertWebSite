@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bal Mutfak</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/BalMutfak.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/navbar.css">
+    <link rel="stylesheet" href="~/css/footer.css">
+    <link rel="shortcut icon" href="~/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/Home/Index"><img src="~/images/yazi-logo.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Home/Index">Anasayfa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/#menu">Menü</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/#about">Hakkımızda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/#communication">İletişim</a>
+                        </li>
+                    </ul>
+                    <form method="get" action="/Home/SearchResult">
+                        <div class="box">
+                            <input type="text" name="searchTerm" placeholder="Arayın..."
+                                value="@Context.Request.Query["searchTerm"]" />
+                            <a href="#">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="minimal-footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="~/images/yazi-beyaz-logo.png" alt="Your Logo" class="logo">
+            </div>
+            <div class="footer-links">
+                <a href="/Home/Index">Anasayfa</a>
+                <a href="/Home/Support">Destek</a>
+                <a href="/Home/Contact">İletişim</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/Balmutffak" target="_blank" aria-label="Instagram" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>
