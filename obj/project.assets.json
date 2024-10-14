@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\erenm\\.nuget\\packages\\": {}
+    "C:\\Users\\beyza\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Projects\\WebProjects\\BalMutfak\\BalMutfak.csproj",
+      "projectUniqueName": "C:\\Projects\\WebProjects\\BalMutfak\\BalMutfak.csproj",
       "projectName": "BalMutfak",
-      "projectPath": "c:\\Projects\\WebProjects\\BalMutfak\\BalMutfak.csproj",
-      "packagesPath": "C:\\Users\\erenm\\.nuget\\packages\\",
-      "outputPath": "c:\\Projects\\WebProjects\\BalMutfak\\obj\\",
+      "projectPath": "C:\\Projects\\WebProjects\\BalMutfak\\BalMutfak.csproj",
+      "packagesPath": "C:\\Users\\beyza\\.nuget\\packages\\",
+      "outputPath": "C:\\Projects\\WebProjects\\BalMutfak\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\erenm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\beyza\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -70,7 +70,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
